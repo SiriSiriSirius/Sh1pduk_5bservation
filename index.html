@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>씹덕관찰일지</title>
+        <link rel = "stylesheet" href = "style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>SH1pduk_5bsevation</h1>
+            <nav>
+                <ul>
+                    <li><a href = "#about">About</a></li>
+                    <li><a href = "#links">Links</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id = "hero" class = "reveal">
+            <div class = "hero-content">
+                <div class = "hero-text">
+                    <h2>초절정미소녀아이도루</h2>
+                    <p>그리고 씹덕 친구들의 과고 일상</p>
+                </div>
+
+                <div class = "hero-image">
+                    <img src = "hero.png" alt = "캐릭터 이미지">
+                </div>
+            </div>
+        </section>
+
+        <section id = "about" class = "reveal">
+            <h2>About</h2>
+            <ul class="member-list">
+                <li class="member-card">
+                    <h3 class="member-name">크로마키맨</h3>
+                    <p class="member-desc">초록색후드</p>
+                </li>
+
+                <li class="member-card">
+                    <h3 class="member-name">ㄱㄹㅇ</h3>
+                    <p class="member-desc">인최마</p>
+                </li>
+
+                <li class="member-card">
+                    <h3 class="member-name">ㅂㅁㅅ</h3>
+                    <p class="member-desc">림버스</p>
+                </li>
+
+                <li class="member-card">
+                    <h3 class="member-name">카나데</h3>
+                    <p class="member-desc">모자가본체</p>
+                </li>
+
+                <li class="member-card">
+                    <h3 class="member-name">ㅇㅇㅅ</h3>
+                    <p class="member-desc">베이스맨</p>
+                </li>
+
+                <li class="member-card">
+                    <h3 class="member-name">ㅈㅁㅊ</h3>
+                    <p class="member-desc">찬찬</p>
+                </li>
+
+                <li class="member-card">
+                    <h3 class="member-name">ㅈㅊㅇ</h3>
+                    <p class="member-desc">그냥조채은</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id = "links" class = "reveal">
+            <h2>Links</h2>
+            <ul>
+                <li><a href = "https://youtube.com/@sh1pduk_5bervation?si=qHUk--In4gD6Zc4y" target = "_blank">Youtube</a></li>
+                <li><a href = "https://www.instagram.com/sh1pduk_5bservation?igsh=dmYzM28xMGw5aDRr" target = "_blank">씹덕관찰일지 인스타그램</a></li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>© SH1pduk_5bsevation</p>
+        </footer>
+        <script>
+            const reveals = document.querySelectorAll('.reveal');
+
+            const observer = new IntersectionObserver(
+                entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                        }
+                    });
+                },
+                {
+                    threshold: 0.15
+                }
+            );
+
+            reveals.forEach(section => {
+                observer.observe(section    );
+            });
+    </script>
+
+    </body>
+</html>
